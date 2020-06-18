@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Vue Calculator</title>
+</head>
+<body>
+  <div id="app">
+
+    <!-- <p v-model="answer"></p><br> -->
+    <input type="text" v-model="answer" disabled><br>
+
+    <div>
+      <button class="green" v-on:click="clear_entry">C</button>
+      <button class="green" v-on:click="negate">+/-</button>
+      <button class="green" v-on:click="divide_hundred">%</button>
+    </div>
+
+    <div>
+      <button class="orange" v-on:click="display(7)">7</button>
+      <button class="orange" v-on:click="display(8)">8</button>
+      <button class="orange" v-on:click="display(9)">9</button>
+      <button class="purple" v-on:click="operator('/')">/</button>
+    </div>
+
+    <div>
+      <button class="orange" v-on:click="display(4)">4</button>
+      <button class="orange" v-on:click="display(5)">5</button>
+      <button class="orange" v-on:click="display(6)">6</button>
+      <button class="purple" v-on:click="operator('*')">*</button>
+    </div>
+
+    <div>
+      <button class="orange" v-on:click="display(1)">1</button>
+      <button class="orange" v-on:click="display(2)">2</button>
+      <button class="orange" v-on:click="display(3)">3</button>
+      <button class="purple" v-on:click="operator('-')">-</button>
+    </div>
+
+    <div>
+      <button class="orange" v-on:click="display(0)">0</button>
+      <!-- <button v-on:click="backspace">back</button> -->
+      <button class="orange" v-on:click="decimal('.')">.</button>
+      <button class="purple" v-on:click="equals">=</button>
+      <button class="purple" v-on:click="operator('+')">+</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+<!-- <input type="text" v-model="answer" disabled>
+    <table>
+      <tr>
+        <td>
+          <input type="text" v-model="answer" disabled>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="button" v-on:click="clear_entry">C</td>
+        <td class="button" v-on:click="negate">+/-</td>
+        <td class="button" v-on:click="divide_hundred">%</td>
+        <td class="button" v-on:click="operator('/')">/</td>
+      </tr>
+
+      <tr>
+        <td class="button" v-on:click="display(7)">7</td>
+        <td class="button" v-on:click="display(8)">8</td>
+        <td class="button" v-on:click="display(9)">9</td>
+        <td class="button" v-on:click="operator('*')">*</td>
+      </tr>
+
+      <tr>
+        <td class="button" v-on:click="display(4)">4</td>
+        <td class="button" v-on:click="display(5)">5</td>
+        <td class="button" v-on:click="display(6)">6</td>
+        <td class="button" v-on:click="operator('-')">-</td>
+      </tr>
+
+      <tr>
+        <td class="button" v-on:click="display(1)">1</td>
+        <td class="button" v-on:click="display(2)">2</td>
+        <td class="button" v-on:click="display(3)">3</td>
+        <td class="button" v-on:click="operator('+')">+</td>
+      </tr>
+
+      <tr>
+        <td class="button" v-on:click="display(0)">0</td>
+        <td class="button" v-on:click="decimal">.</td>
+        <td class="button" v-on:click="equals">=</td>
+      </tr>
+    </table> -->
